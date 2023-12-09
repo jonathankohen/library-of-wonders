@@ -1,0 +1,24 @@
+.hero-1-body {
+	height: 100vh;
+}
+
+.hero-1-row {
+	height: 100vh;
+	// margin: 2rem 0;
+}
+
+.hero-1-cols {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.hero-1-btns {
+	margin: 3.75rem 0;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		padding: 2rem;
+	}
+}

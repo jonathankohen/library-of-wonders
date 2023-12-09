@@ -1,0 +1,102 @@
+@font-face {
+	font-family: 'Inter';
+	src: url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap);
+}
+
+// Both included just in case we later want to use a different font family for display.
+$font-family-display: 'Inter', sans-serif;
+$font-family-body: 'Inter', sans-serif;
+
+$font-weights: (
+	'thin': 100,
+	'extra-light': 200,
+	'light': 300,
+	'regular': 400,
+	'medium': 500,
+	'semi-bold': 600,
+	'bold': 700,
+	'extra-bold': 800,
+	'black': 900,
+);
+
+$display-sizes: (
+	'h1': 4.5rem,
+	'h2': 4rem,
+	'h3': 3.5rem,
+	'h4': 3.25rem,
+);
+
+$heading-sizes: (
+	'h1': 2.5rem,
+	'h2': 2rem,
+	'h3': 1.75rem,
+	'h4': 1.5rem,
+	'h5': 1.25rem,
+	'h6': 1rem,
+);
+
+$display-heading-sizes: (
+	'h1': 4.5rem,
+	'h2': 4rem,
+	'h3': 3.5rem,
+	'h4': 3.25rem,
+);
+
+$body-font-sizes: (
+	'1': 1.25rem,
+	'2': 1.125rem,
+	'3': 1rem,
+	'4': 0.875rem,
+);
+
+$line-spacing: (
+	'normal': 100%,
+	'105': 105%,
+	'110': 110%,
+	'115': 115%,
+	'120': 120%,
+	'125': 125%,
+	'130': 130%,
+	'135': 135%,
+	'140': 140%,
+	'145': 145%,
+	'150': 150%,
+	'155': 155%,
+	'160': 160%,
+	'165': 165%,
+	'170': 170%,
+	'175': 175%,
+	'180': 180%,
+);
+
+// Buttons
+
+$btns-padding-x: (
+	'24': 1.5rem,
+	'32': 2rem,
+	'40': 2.5rem,
+);
+
+$btns-padding-y: (
+	'16': 1rem,
+	'12': 0.75rem,
+	'10': 0.625rem,
+	'8': 0.5rem,
+);
+
+$btns-variants: ('default', 'icon-right', 'icon-left');
+
+$btns-bgs: (
+	'brand-fill',
+	'brand-stroke',
+	'white-fill',
+	'white-stroke',
+	'gray-fill',
+	'gray-stroke'
+);
+
+$link-types: ('primary', 'primary-underline', 'white', 'white-underline');
+
+// Borders
+
+$border-radius: 0.5rem;

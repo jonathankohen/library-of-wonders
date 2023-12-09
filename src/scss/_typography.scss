@@ -1,0 +1,105 @@
+@use 'sass:map';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-family-display;
+}
+
+h1 {
+	font-size: map.get($display-sizes, 'h1');
+	margin-bottom: 2rem;
+}
+
+p,
+a {
+	font-family: $font-family-body;
+}
+
+a {
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
+
+.italic {
+	font-style: italic;
+}
+
+@each $weight-name, $weight in $font-weights {
+	.#{$weight-name} {
+		font-weight: $weight;
+	}
+}
+
+@for $i from 1 through 6 {
+	@each $name, $weight in $font-weights {
+		.h#{$i}-#{$name} {
+			font-family: $font-family-display;
+			font-size: map.get($heading-sizes, 'h#{$i}');
+			font-weight: $weight;
+		}
+
+		.h#{$i}-#{$name}-italic {
+			font-family: $font-family-display;
+			font-size: map.get($heading-sizes, 'h#{$i}');
+			font-weight: $weight;
+			font-style: italic;
+		}
+	}
+}
+
+@for $i from 1 through 4 {
+	.h#{$i}-#{'display'} {
+		font-family: $font-family-display;
+		font-size: map.get($display-heading-sizes, 'h#{$i}');
+		font-weight: 700;
+	}
+
+	.h#{$i}-#{'display'}-italic {
+		font-family: $font-family-display;
+		font-size: map.get($display-heading-sizes, 'h#{$i}');
+		font-weight: 700;
+		font-style: italic;
+	}
+}
+
+@for $i from 1 through 4 {
+	.body-#{$i} {
+		font-family: $font-family-body;
+		font-size: map.get($body-font-sizes, '#{$i}');
+	}
+
+	@each $weight-name, $weight in $font-weights {
+		.body-#{$i}-#{$weight-name} {
+			font-family: $font-family-body;
+			font-size: map.get($body-font-sizes, '#{$i}');
+			font-weight: $weight;
+		}
+
+		.body-#{$i}-#{$weight-name}-italic {
+			font-family: $font-family-display;
+			font-size: map.get($body-font-sizes, '#{$i}');
+			font-weight: $weight;
+			font-style: italic;
+		}
+	}
+}
+
+.primary-text {
+	color: color('primary', '600');
+}
+
+.primary-bg {
+	background-color: color('primary', '600');
+}
+
+.primary-link {
+	color: color('primary', '600');
+
+	&:hover {
+		color: color('primary', '700');
+	}
+}
